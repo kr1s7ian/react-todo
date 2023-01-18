@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+
+* {
+  font-family: "JetBrains Mono", sans-serif, serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: papayawhip;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content {
+  padding-top: 100px;
+  display: grid;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+  z-index: 1;
+  display:block;
+  position: fixed;
+  padding-top: 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-row {
+  position: inherit;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #92f5ff;
+  height: 100px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+.nav-row input {
+  margin: 10px;
+  text-align: center;
+  color: white;
+  width: 60%;
+  font-size: 2rem;
+  background: none;
+  outline: none!important;
+  border: 6px dotted white;
+  border-radius: 1.5rem;
+  align-self: center;
+  height: 4rem;
+}
+
+.nav-row input::placeholder {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-row input:active {
+  outline: none!important;
+}
+.nav-row input:focus {
+  outline: none!important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+button {
+  margin: 25px;
+  border: none;
+  width: 200px;
+  height: 75px;
+  border-radius: 1rem;
+  background-color: #f9ff94;
+  color: 	#ff63ca;
+  border: 6px dotted white;
+  font-size: 1.5rem;
+  align-self:center;
+}
+
+.button:active, button:active {
+  background-color: #ff63ca;
+  outline: dotted white;
+  color: white;
+  border: -2px solid;
+}
+
+button:focus, button:focus {
+  outline: solid 1px white;
+}
+
+nav h2 {
+  padding: 10px;
+  color: white;
+  align-self: center;
+  background: none;
+}
+
+.row {
+  width: 98vmax;
+  margin: 10px;
+  height: 4rem;
+}
+
+.todo {
+  border-radius: 1rem 2.25rem 2.25rem 1rem;
+  background-color:white;
+  opacity: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.todo h1 {
+  padding: 10px;
+  opacity: 100%;
+  background: none;
+}
+
+.todo .delete-btn {
+  margin: 10px;
+  height: 75%;
+  width: 200px;
+  border-radius: 2rem;
+  font-size: 1.5rem;
+  outline: none;
 }
